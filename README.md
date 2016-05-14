@@ -1,6 +1,7 @@
 # Substance Project
 ## What You need
 * xampp
+
 ## How to install
 * Copy all structure to htdocs folder ()
 * Create database structure in phpmyadmin and import from sql folder substance.sql
