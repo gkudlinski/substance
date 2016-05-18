@@ -23,6 +23,9 @@ class SubstanceGroupController
         elseif (isset($_GET['action']) && $_GET['action'] == 'modify') {
             $this->modify();
         }
+        elseif (isset($_GET['action']) && $_GET['action'] == 'list') {
+            $this->listItems();
+        }
         else{
             exit('Please read readme.md file');
         }
@@ -44,5 +47,9 @@ class SubstanceGroupController
     {
         $this->model->formModify();
         $this->view->formModify();
+    }
+    private function listItems()
+    {
+        $this->view->listItems($this->model->listItems());
     }
 }

@@ -23,4 +23,13 @@ class SubstanceModel extends DatabaseModel
             $this->db->query('UPDATE substance SET code="' . $_POST['code'] . '", name="' . $_POST['name'] . '", unit="' . $_POST['unit'] . '" WHERE id="' . $_POST['id'] . '"');
         }
     }
+    public function listItems()
+    {
+        $rows=$this->db->query('Select * from substance;');
+        while ($row = $rows->fetch_assoc())
+        {
+            $tmp[] = $row;
+        }
+        return $tmp;
+    }
 }

@@ -32,4 +32,16 @@ class SubstanceGroupView
         </form>
         ';
     }
+    public function listItems($items)
+    {
+        $i = 0;
+        foreach ($items as $item) {
+            echo '(Nr' . $i . ') ';
+            $i++;
+            foreach ($item as $key => $value) {
+                echo $key . ' ' . $value;
+            }
+            echo'<br />';
+        }
+    }
 }

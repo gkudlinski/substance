@@ -22,4 +22,13 @@ class SubstanceGroupModel extends DatabaseModel
             $this->db->query('UPDATE group SET name="' . $_POST['name'] . '", parent_name="' . $_POST['parent_name'] . '" WHERE id="' . $_POST['id'] . '"');
         }
     }
+    public function listItems()
+    {
+        $rows=$this->db->query('Select * from group;');
+        while ($row = $rows->fetch_assoc())
+        {
+            $tmp[] = $row;
+        }
+        return $tmp;
+    }
 }

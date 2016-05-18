@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: local
--- Czas generowania: 14 Maj 2016, 18:00
+-- Czas generowania: 18 Maj 2016, 20:20
 -- Wersja serwera: 5.7.10-log
 -- Wersja PHP: 7.0.4
 
@@ -32,6 +32,13 @@ CREATE TABLE `group` (
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `group`
+--
+
+INSERT INTO `group` (`id`, `parent_name`, `name`) VALUES
+(1, 'grupa1', 'grupa2');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +52,15 @@ CREATE TABLE `substance` (
   `unit` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `substance`
+--
+
+INSERT INTO `substance` (`id`, `code`, `name`, `unit`) VALUES
+(1, 'aaa', 'aaa', 'aaaa'),
+(2, 'b', 'b', 'b'),
+(3, '33', '33', '33');
+
 -- --------------------------------------------------------
 
 --
@@ -56,6 +72,13 @@ CREATE TABLE `unit` (
   `name` varchar(255) NOT NULL,
   `shortcut` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `unit`
+--
+
+INSERT INTO `unit` (`id`, `name`, `shortcut`) VALUES
+(1, 'złoty', 'pln');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -92,17 +115,17 @@ ALTER TABLE `unit`
 -- AUTO_INCREMENT dla tabeli `group`
 --
 ALTER TABLE `group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT dla tabeli `substance`
 --
 ALTER TABLE `substance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT dla tabeli `unit`
 --
 ALTER TABLE `unit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
