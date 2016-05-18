@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: local
--- Czas generowania: 18 Maj 2016, 20:20
+-- Czas generowania: 18 Maj 2016, 20:56
 -- Wersja serwera: 5.7.10-log
 -- Wersja PHP: 7.0.4
 
@@ -37,7 +37,9 @@ CREATE TABLE `group` (
 --
 
 INSERT INTO `group` (`id`, `parent_name`, `name`) VALUES
-(1, 'grupa1', 'grupa2');
+(2, 'grupa2', 'grupa1'),
+(1, 'grupa1', 'grupa2'),
+(3, 'z2', 'z1');
 
 -- --------------------------------------------------------
 
@@ -115,7 +117,7 @@ ALTER TABLE `unit`
 -- AUTO_INCREMENT dla tabeli `group`
 --
 ALTER TABLE `group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT dla tabeli `substance`
 --
